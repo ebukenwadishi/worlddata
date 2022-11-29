@@ -62,6 +62,10 @@ df.describe()['ratingimpact']
 
 df.describe()['Year']
 
+import scipy.stats
+
+scipy.stats.hmean(df['Year'])
+
 plt.figure(figsize=(8,5))
 sns.countplot('ratingimpact',data=df,palette='ocean')
 
@@ -91,4 +95,3 @@ def plotting_features(data):
             ax[i].set_title(f'{cols[i]} distribution');
 
 plotting_features(df)
-
